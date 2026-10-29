@@ -1,0 +1,15 @@
+{
+  "name": "bin-checker-telegram-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bot de Telegram para consultar BIN/IIN de 6 u 8 digitos, incluyendo categoria/nivel cuando esta disponible.",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "dev": "node --env-file=.env scripts/dev.js",
+    "webhook": "node --env-file=.env scripts/setup-webhook.js",
+    "test": "node --test",
+    "check": "node --check api/telegram.js && node --check src/bin-client.js && node --check src/bot.js"
+  },
+  "license": "MIT"
+}
